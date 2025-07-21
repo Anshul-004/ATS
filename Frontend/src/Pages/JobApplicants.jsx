@@ -343,12 +343,12 @@ const JobApplicants = () => {
     try {
       setExportLoading(true);
       
-      const token = localStorage.getItem('token');
-      if (!token) {
-        alert('Authentication required. Please login again.');
-        navigate('/login/hr');
-        return;
-      }
+      // const token = localStorage.getItem('token');
+      // if (!token) {
+      //   alert('Authentication required. Please login again.');
+      //   navigate('/login/hr');
+      //   return;
+      // }
 
       const response = await axios.post(`/api/job/${id}/exportApplicants`, {
         format: 'excel'
@@ -906,7 +906,7 @@ const JobApplicants = () => {
               Upload Test Results
             </button>
             
-            <button 
+            {/* <button 
               className="btn btn-success btn-lg"
               onClick={handleExportApplicantsData}
               disabled={exportLoading}
@@ -922,7 +922,7 @@ const JobApplicants = () => {
                   Export & Email All Data
                 </>
               )}
-            </button>
+            </button> */}
           </div>
           </>
         )}
